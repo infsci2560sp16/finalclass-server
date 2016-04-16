@@ -10,5 +10,5 @@ var userSchema = mongoose.Schema({
      temp_str:String 
 });  
 
-mongoose.connect('mongodb://localhost:27017/node-android'); 
+mongoose.connect(process.env.MONGODB_URI); 
 module.exports = mongoose.model('users', userSchema);
