@@ -7,7 +7,8 @@ var user = require('../config/models');
 exports.register = function (email, password, callback) {
 
     var x = email;
-    console.log("*** a");
+    console.log("*** x = " + x);
+    console.log("x.indexOf('@') = " + x.inddexOf("@"));
     if (!(x.indexOf("@") = x.length)) {
         console.log("*** b");
         if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/) && password.length > 4 && password.match(/[0-9]/) && password.match(/.[!,@,#,$,%,^,&,*,?,_,~]/)) {
