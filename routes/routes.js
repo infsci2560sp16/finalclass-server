@@ -25,7 +25,7 @@ module.exports = function (app) {
         var password = req.body.password;
         console.log("Email: " + email);
         console.log("Password: " + password);
-
+        console.log("register == " + register);
         register.register(email, password, function (found) {
             console.log(found);
             res.json(found);
