@@ -1,16 +1,17 @@
-{     
-     "name": "node-android",     
-     "version": "0.0.1",     
-     "main": "app.js",   
-     "dependencies": {       
-          "express" : "~4.14.0",       
-          "mongoose" : "~4.7.1",      
-          "csprng" : "~0.1.1",        
-          "connect": "~3.5.0",
-          "morgan": "~1.7.0",
-          "body-parser": "~1.15.2",       
-          "nodemailer":"~2.6.4",      
-          "crypto":"~0.0.3",      
-          "gravatar":"~1.6.0"  
-     } 
+{
+  "name": "node-android",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "connect": "~3.5.0",
+    "crypto": "~0.0.3",
+    "csprng": "~0.1.1",
+    "express": "~4.14.0",
+    "gravatar": "~1.6.0",
+    "mongodb": "^2.2.12",
+    "mongoose": "~4.7.1",
+    "morgan": "~1.7.0",
+    "nodemailer": "~2.6.4"
+  }
 }
