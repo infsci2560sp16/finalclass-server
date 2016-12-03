@@ -14,7 +14,6 @@ var uristring =
     process.env.PROD_MONGODB ||
     process.env.MONGOHQ_URL ||
     'mongodb://localhost/HelloMongoose';
-
-console.log("******aaaaa: " + uristring); 
+ 
 mongoose.connect(uristring); 
 module.exports = mongoose.model('users', userSchema);
