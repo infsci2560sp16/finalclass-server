@@ -10,5 +10,11 @@ var userSchema = mongoose.Schema({
      temp_str:String 
 });  
 
-mongoose.connect(process.env.MONGODB_URI); 
+var uristring =
+    process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL ||
+    'mongodb://localhost/HelloMongoose';
+
+console.log("******: " + uristring); 
+mongoose.connect(uristring); 
 module.exports = mongoose.model('users', userSchema);

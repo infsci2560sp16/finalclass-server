@@ -3,12 +3,14 @@
      "version": "0.0.1",     
      "main": "app.js",   
      "dependencies": {       
-          "express" : "~4.0.0",       
-          "mongoose" : "~3.8.8",      
+          "express" : "~4.14.0",       
+          "mongoose" : "~4.7.1",      
           "csprng" : "~0.1.1",        
-          "connect": "~2.14.4",       
-          "nodemailer":"~0.6.3",      
+          "connect": "~3.5.0",
+          "morgan": "~1.7.0",
+          "body-parser": "~1.15.2",       
+          "nodemailer":"~2.6.4",      
           "crypto":"~0.0.3",      
-          "gravatar":"~1.0.6"   
+          "gravatar":"~1.6.0"  
      } 
 }

@@ -4,6 +4,8 @@
 var express = require('express');
 var connect = require('connect');
 var app = express();
+var bodyParser = require('body-parser');
+var logger = require('morgan');
 var port = process.env.PORT || 8080;
 
 var allowCrossDomain = function(req, res, next) {
@@ -20,12 +22,17 @@ var allowCrossDomain = function(req, res, next) {
     }
 };
 
-// Configuration 
+// Configuration
 app.use(allowCrossDomain);
 app.use(express.static(__dirname + '/public'));
-app.use(connect.logger('dev'));
-app.use(connect.json());
-app.use(connect.urlencoded());
+//app.use(connect.logger('dev'));
+app.use(logger('dev'));
+//app.use(connect.json());
+//app.use(connect.urlencoded());
+app.use(bodyParser.urlencoded({
+      extended: true
+  }));
+app.use(bodyParser.json());
 // Routes  
 
 require('./routes/routes.js')(app);
