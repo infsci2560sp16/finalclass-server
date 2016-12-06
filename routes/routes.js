@@ -4,9 +4,7 @@ var login = require('../config/login');
 
 module.exports = function (app) {
 
-
     app.get('/', function (req, res) {
-
         res.end("Node-Android-Project");
     });
 
@@ -42,7 +40,6 @@ module.exports = function (app) {
     });
 
     app.post('/api/resetpass', function (req, res) {
-
         var email = req.body.email;
 
         chgpass.respass_init(email, function (found) {
